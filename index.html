@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="スマサーGPAのランキングの見方、勝敗登録の手順、レートの仕組みをまとめた使い方ガイド">
+<meta name="theme-color" content="#070b16">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<title>スマサーGPA 使い方ガイド</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+<style>
+html { background: #070b16; }
+body { margin: 0; }
+img { max-width: 100%; }
+/* Layout: サイト本体と同じ濃紺の一本柱。見出しは左の青→赤のバー、手順だけ番号付き */
+:root {
+  color-scheme: dark;
+  --bg: #070b16;
+  --panel: #0f1930;
+  --panel-2: #142140;
+  --line: #22325a;
+  --text: #e8edf8;
+  --muted: #95a2bf;
+  --accent: #6f7dff;
+  --accent-strong: #3300ee;
+  --red: #ff5a45;
+  --up: #4ade80;
+  --down: #f87171;
+  --gold: #f5c84b;
+  --font-body: "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", system-ui, sans-serif;
+  --font-num: "Roboto Condensed", "Noto Sans JP", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  background-image: radial-gradient(1100px 460px at 50% -180px, #14225099, transparent);
+  background-repeat: no-repeat;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15.5px;
+  line-height: 1.85;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+}
+a { color: #a9b6ff; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.wrap { max-width: 760px; margin: 0 auto; }
+.num { font-family: var(--font-num); font-variant-numeric: tabular-nums; }
+
+/* ヘッダー */
+.masthead { display: flex; align-items: center; gap: 14px; padding-block: 28px 8px; }
+.masthead img { width: 64px; height: 64px; flex: none; }
+.masthead .name { font-size: 26px; font-weight: 900; line-height: 1.2; letter-spacing: .02em; }
+.masthead .name b { color: var(--accent); font-family: var(--font-num); }
+.masthead .sub { font-size: 12.5px; color: var(--muted); letter-spacing: .04em; }
+.masthead .sub b { color: var(--red); }
+h1 { font-size: 30px; font-weight: 900; line-height: 1.35; margin: 18px 0 8px; text-wrap: balance; }
+.lead { color: #c9d2e8; margin: 0 0 20px; }
+.url {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px;
+}
+.url span { font-size: 12px; color: var(--muted); font-weight: 700; letter-spacing: .06em; }
+.url a { font-weight: 700; font-size: 17px; word-break: break-all; }
+
+/* 目次 */
+.toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 8px; padding: 0; list-style: none; }
+.toc a {
+  display: inline-block; padding: 6px 14px; border-radius: 99px; text-decoration: none; font-size: 13.5px; font-weight: 700;
+  color: var(--text); background: var(--panel); border: 1px solid var(--line);
+}
+.toc a:hover { border-color: var(--accent); }
+
+/* セクション */
+section { margin-top: 44px; }
+h2 { font-size: 21px; font-weight: 900; line-height: 1.4; margin: 0 0 12px; text-wrap: balance; }
+h2::before {
+  content: ""; display: inline-block; width: 5px; height: 19px; margin-right: 10px; vertical-align: -2px;
+  background: linear-gradient(var(--accent), var(--red)); border-radius: 2px;
+}
+h3 { font-size: 16.5px; font-weight: 700; margin: 26px 0 6px; }
+p { margin: 0 0 12px; }
+ul { margin: 0 0 12px; padding-left: 1.3em; }
+li { margin: 4px 0; }
+strong { color: #fff; }
+.muted { color: var(--muted); }
+
+/* ページ一覧 */
+.pages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 8px; }
+.page { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; min-width: 0; }
+.page .ttl { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 16px; }
+.page svg { width: 20px; height: 20px; fill: var(--accent); flex: none; }
+.page p { margin: 4px 0 0; font-size: 14px; color: #c9d2e8; line-height: 1.7; }
+.page .who { font-size: 11.5px; font-weight: 700; color: var(--muted); letter-spacing: .04em; }
+
+/* 手順 */
+.steps { list-style: none; counter-reset: s; padding: 0; margin: 14px 0; display: grid; gap: 10px; }
+.steps li {
+  counter-increment: s; position: relative; margin: 0; padding: 12px 16px 12px 56px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+}
+.steps li::before {
+  content: counter(s); position: absolute; left: 14px; top: 12px; width: 28px; height: 28px; border-radius: 50%;
+  display: grid; place-items: center; font-family: var(--font-num); font-size: 15px; color: #fff; background: var(--accent-strong);
+}
+.ui {
+  display: inline-block; padding: 0 7px; border-radius: 5px; font-size: 13.5px; font-weight: 700; line-height: 1.6;
+  background: #1b2848; border: 1px solid var(--line); color: #fff; white-space: nowrap;
+}
+
+/* 注意 */
+.note {
+  margin: 14px 0; padding: 12px 16px; border-radius: 10px; font-size: 14.5px;
+  background: color-mix(in srgb, var(--gold) 9%, var(--panel)); border: 1px solid color-mix(in srgb, var(--gold) 40%, var(--line));
+}
+.note b { color: var(--gold); }
+
+/* 数式・表 */
+.formula {
+  background: var(--panel-2); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin: 10px 0 14px;
+  font-weight: 700; overflow-x: auto;
+}
+.formula div { white-space: nowrap; }
+.formula .lbl { display: inline-block; min-width: 4.5em; color: var(--muted); font-weight: 500; }
+.table-wrap { overflow-x: auto; margin: 10px 0 14px; border: 1px solid var(--line); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; min-width: 480px; font-size: 14.5px; }
+th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--line); }
+th { font-size: 12.5px; color: var(--muted); font-weight: 700; background: var(--panel); }
+tr:last-child td { border-bottom: 0; }
+td.n { text-align: right; font-family: var(--font-num); font-size: 16px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+th.n { text-align: right; }
+.up { color: var(--up); }
+.down { color: var(--down); }
+.bonus { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 10px 0 14px; }
+.bonus div { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; }
+.bonus .v { font-family: var(--font-num); font-size: 30px; color: var(--gold); line-height: 1.2; }
+.bonus .k { font-size: 14px; font-weight: 700; }
+
+/* FAQ */
+details { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 0 16px; margin: 8px 0; }
+summary { cursor: pointer; font-weight: 700; padding: 12px 0; list-style: none; display: flex; gap: 10px; }
+summary::-webkit-details-marker { display: none; }
+summary::before { content: "Q"; font-family: var(--font-num); color: var(--accent); flex: none; }
+details[open] summary { border-bottom: 1px solid var(--line); }
+details > div { padding: 10px 0 12px; }
+details > div p:last-child { margin-bottom: 0; }
+
+footer { margin-top: 52px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 13.5px; color: var(--muted); }
+footer p { overflow-wrap: anywhere; }
+
+@media (max-width: 560px) {
+  body { font-size: 15px; }
+  h1 { font-size: 24px; }
+  .masthead img { width: 52px; height: 52px; }
+  .masthead .name { font-size: 22px; }
+  .pages, .bonus { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+html { scroll-behavior: smooth; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <img src="data:image/png;base64,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" alt="スマサー連合ロゴ">
+    <div>
+      <div class="name">スマサー<b>GPA</b></div>
+      <div class="sub"><b>S</b>mashbros circle lea<b>G</b>ue <b>P</b>ower r<b>A</b>nking</div>
+    </div>
+  </header>
+
+  <h1>スマサーGPA 使い方ガイド</h1>
+  <p class="lead">スマサー連合に所属する大学スマブラサークル同士の試合結果を、レート制で集計・公開するサイトです。ランキングや各サークルの成績は誰でも見られます。試合結果の登録は、運営から登録パスワードを共有された方が行えます。</p>
+  <div class="url"><span>サイトURL</span><a href="https://sumasaagpa.github.io/J/" target="_blank" rel="noopener">https://sumasaagpa.github.io/J/</a></div>
+
+  <ul class="toc" aria-label="目次">
+    <li><a href="#pages">ページの構成</a></li>
+    <li><a href="#ranking">ランキングの見方</a></li>
+    <li><a href="#search">サークル検索</a></li>
+    <li><a href="#entry">勝敗登録のしかた</a></li>
+    <li><a href="#rating">レートの仕組み</a></li>
+    <li><a href="#faq">よくある質問</a></li>
+  </ul>
+
+  <section id="pages">
+    <h2>ページの構成</h2>
+    <p>パソコンでは画面上部、スマートフォンでは画面下部のメニューから各ページに移動できます。表示は使っている機器に合わせて自動で切り替わります。</p>
+    <div class="pages">
+      <div class="page">
+        <div class="ttl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h4V10H3v10zm7 0h4V4h-4v16zm7 0h4v-7h-4v7z"/></svg>ランキング</div>
+        <p>全サークルのレート順位。常に最新の状態を表示します。</p>
+      </div>
+      <div class="page">
+        <div class="ttl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 104.47 10.03l4.75 4.75 1.41-1.41-4.75-4.75A6 6 0 0010 4zm0 2a4 4 0 110 8 4 4 0 010-8z"/></svg>サークル検索</div>
+        <p>サークル名・大学名で探して、成績やレートの変動履歴を確認できます。</p>
+      </div>
+      <div class="page">
+        <div class="ttl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v2h-2v2a5 5 0 01-4 4.9V15h3v2H8v-2h3v-3.1A5 5 0 017 7V5H5V3zm4 2v2a3 3 0 006 0V5H9zM6 19h12v2H6z"/></svg>勝敗登録</div>
+        <p>試合の結果を登録します。登録パスワードが必要です。</p>
+      </div>
+      <div class="page">
+        <div class="ttl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8a4 4 0 100 8 4 4 0 000-8zm8.94 3a9 9 0 00-.32-1.6l2-1.55-2-3.46-2.36.96a8.9 8.9 0 00-2.77-1.6L15 1h-4l-.49 2.75a8.9 8.9 0 00-2.77 1.6l-2.36-.96-2 3.46 2 1.55a9 9 0 000 3.2l-2 1.55 2 3.46 2.36-.96a8.9 8.9 0 002.77 1.6L11 23h4l.49-2.75a8.9 8.9 0 002.77-1.6l2.36.96 2-3.46-2-1.55c.2-.52.3-1.06.32-1.6z"/></svg>設定</div>
+        <p><span class="who">運営専用</span><br>サークルの登録・編集、ボーナス付与などを行う管理画面です。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ranking">
+    <h2>ランキングの見方</h2>
+    <p>左から <strong>順位・ロゴ・大学名・サークル名・レート</strong> の順に並んでいます。行を押すと、そのサークルの詳細ページに移動します。</p>
+    <ul>
+      <li>レートの高い順に上から並びます。<strong>上位5サークル</strong>は金・銀・銅・青の枠で目立つように表示されます。</li>
+      <li>レートは小数第2位まで表示されます（例：<span class="num">1519.23</span>）。内部では小数点以下まで細かく計算しており、並び順もその値で決まります。</li>
+      <li>レートが完全に同じサークルは同じ順位になり、大学名の読みの五十音順で上から並びます。</li>
+      <li>画面を開いている間、約10秒ごとに自動で最新の状態に更新されます。</li>
+    </ul>
+  </section>
+
+  <section id="search">
+    <h2>サークル検索・サークル詳細</h2>
+    <p>検索欄に <strong>サークル名</strong> または <strong>大学名</strong> の一部を入力すると、該当するサークルが絞り込まれます。ひらがな・カタカナ、全角・半角の違いは気にせず検索できます。</p>
+    <p>サークルを選ぶと、次の情報が表示されます。</p>
+    <ul>
+      <li>現在のレート、全体での順位、通算の勝敗数</li>
+      <li>レート変動履歴（新しい順）。試合なら対戦相手・勝敗・変動したレートが、ボーナスなどなら理由と変動したレートが表示されます。</li>
+    </ul>
+    <p class="muted">履歴の対戦相手名を押すと、相手サークルのページに移動できます。</p>
+  </section>
+
+  <section id="entry">
+    <h2>勝敗登録のしかた</h2>
+    <p>試合が終わったら、どちらかのサークルの方が結果を登録してください。</p>
+    <ol class="steps">
+      <li>メニューの <span class="ui">勝敗登録</span> を開きます。</li>
+      <li><span class="ui">登録パスワード</span> を入力します。パスワードは運営から共有されたものを使ってください。</li>
+      <li><span class="ui">サークル 1</span> と <span class="ui">サークル 2</span> で、対戦した2つのサークルを選びます。</li>
+      <li><span class="ui">勝者</span> の欄で、勝ったサークルのボタンを押します。</li>
+      <li><span class="ui">試合の種類</span> を選びます。ふだんの試合は「通常試合」、本戦トーナメントなどの重要な試合は「トーナメント試合」です。</li>
+      <li>画面に表示される予想変動値を確認して <span class="ui">登録する</span> を押し、確認画面でもう一度 <span class="ui">登録する</span> を押します。</li>
+    </ol>
+    <div class="note"><b>注意</b>　登録パスワードは安全のため、ブラウザに保存されず、登録のたびに入力が必要です。パスワードを第三者に教えたり、SNSなどに載せたりしないでください。</div>
+    <p>登録した結果はすぐにランキングに反映されます。<strong>勝者を逆にしてしまった、サークルを選び間違えたなど、誤って登録した場合</strong>は、自分で登録し直さず、下記のXアカウントのDMで運営にご連絡ください。運営が取り消します。</p>
+  </section>
+
+  <section id="rating">
+    <h2>レートの仕組み</h2>
+    <p>すべてのサークルは <strong class="num">1500</strong> からスタートします。レートは次の2つで変動します。</p>
+
+    <h3>1. 試合の勝ち負け（Eloレーティング）</h3>
+    <p>勝つとレートが上がり、負けると同じ分だけ下がります。変動の大きさは、試合前の両サークルのレート差で決まります。</p>
+    <div class="formula">
+      <div><span class="lbl">勝利時</span>＋32 ×（1 − 1 ÷（1 ＋ 10<sup>（相手のレート − 自分のレート）÷ 400</sup>））</div>
+      <div><span class="lbl">敗北時</span>上の式で勝者が得た分と同じだけ減少</div>
+    </div>
+    <p>格上に勝つほど大きく上がり、格下に負けるほど大きく下がります。<strong>トーナメント試合は変動が1.2倍</strong>になります。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>対戦（勝者 vs 敗者）</th><th class="n">通常試合</th><th class="n">トーナメント試合</th></tr></thead>
+        <tbody>
+          <tr><td>1500 vs 1500（同じレート）</td><td class="n"><span class="up">+16</span> / <span class="down">−16</span></td><td class="n"><span class="up">+19</span> / <span class="down">−19</span></td></tr>
+          <tr><td>1600 vs 1400（格上が勝利）</td><td class="n"><span class="up">+8</span> / <span class="down">−8</span></td><td class="n"><span class="up">+9</span> / <span class="down">−9</span></td></tr>
+          <tr><td>1400 vs 1600（格下が勝利）</td><td class="n"><span class="up">+24</span> / <span class="down">−24</span></td><td class="n"><span class="up">+29</span> / <span class="down">−29</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted">変動額は四捨五入した整数で表示されますが、内部では小数のまま計算しています。</p>
+
+    <h3>2. 大会成績による順位ボーナス</h3>
+    <p>リーグ戦などの成績に応じて、運営がボーナスを付与します。付与された理由はサークルの変動履歴に表示されます。</p>
+    <div class="bonus">
+      <div><div class="v">+40</div><div class="k">予選抜けボーナス</div></div>
+      <div><div class="v">+30</div><div class="k">優勝ボーナス</div></div>
+    </div>
+
+    <h3>その他の変動</h3>
+    <ul>
+      <li><strong>過去の試合の反映：</strong>対戦順序がわからない過去の試合は、相手のレートに関係なく勝者 +16・敗者 −16 で運営が反映することがあります。</li>
+      <li><strong>レート均一化：</strong>運営が定めたタイミングで、レートの差を縮める調整を行います。計算式は「（現在のレート − 1500）÷ X ＋ 1500」です。たとえば X = 2 のとき、1600 は 1550 に、1400 は 1450 になります。</li>
+      <li><strong>運営による調整：</strong>必要に応じて運営がレートを調整することがあり、その場合も理由が履歴に表示されます。</li>
+    </ul>
+  </section>
+
+  <section id="faq">
+    <h2>よくある質問</h2>
+    <details>
+      <summary>登録パスワードはどこで分かりますか？</summary>
+      <div><p>各サークルの代表者などに運営から共有されています。わからない場合はサークル内で確認するか、運営のXアカウントにDMでお問い合わせください。</p></div>
+    </details>
+    <details>
+      <summary>「パスワードが違います」と表示されます</summary>
+      <div><p>入力ミスがないか確認してください。パスワードは運営が変更することがあります。何度も間違えると、しばらく登録できなくなります。その場合は1分ほど待ってからやり直してください。</p></div>
+    </details>
+    <details>
+      <summary>間違えて登録してしまいました</summary>
+      <div><p>逆の結果を登録し直すと、レートが正しく戻りません。運営のXアカウントにDMで、登録した日時・対戦したサークル・正しい結果をお知らせください。運営が誤った登録を取り消します。</p></div>
+    </details>
+    <details>
+      <summary>サークル名や大学名、ロゴを変更したいです</summary>
+      <div><p>名称やロゴの変更は運営が行います。新しい名称や、正方形のロゴ画像を添えてDMでご連絡ください。</p></div>
+    </details>
+    <details>
+      <summary>自分のサークルがランキングにありません</summary>
+      <div><p>新しいサークルの登録も運営が行います。サークル名と正式な大学名をDMでお知らせください。</p></div>
+    </details>
+    <details>
+      <summary>スマートフォンでも使えますか？</summary>
+      <div><p>はい。スマートフォンで開くとスマートフォン向けの画面で表示されます。アプリのインストールは不要です。</p></div>
+    </details>
+  </section>
+
+  <footer>
+    <p>このサイトは大学スマサー連合<a href="https://x.com/university_SSBU" target="_blank" rel="noopener">https://x.com/university_SSBU</a>　のスマサーリーグ部門<a href="https://x.com/Sumasaa_League" target="_blank" rel="noopener">https://x.com/Sumasaa_League</a>　によって運営されています。</p>
+    <p>ご意見やご相談、バグ報告などありましたら上記XアカウントのDMにてお願いいたします。</p>
+  </footer>
+</div>
+</body>
+</html>
